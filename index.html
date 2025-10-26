@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ícono de la aplicación -->
+    <link rel="icon" type="image/svg+xml" href="/redfi.svg" />
+    <!-- Configuración PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+    <!-- Configuración de viewport para móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Red-Fi</title>
+  </head>
+
+  <body>
+    <!-- Contenedor principal donde se monta la app de React -->
+    <div
+      id="root"
+      class="bg-fondo text-texto min-h-screen flex flex-col overflow-x-hidden"
+    ></div>
+    <!-- Script principal de la aplicación -->
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Nodo adicional para renderizar modales -->
+    <div id="modal-root"></div>
+  </body>
+</html>

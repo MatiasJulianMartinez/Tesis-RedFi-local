@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-texto: #ffffff;
+  --color-fondo: #161616;
+  --color-primario: #0047d6;
+  --color-secundario: #1f2a40;
+  --color-acento: #fb8531;
+}
+
+@layer base {
+  body {
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Nunito", sans-serif;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  /* Scrollbar global */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-acento) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--color-acento);
+    border-radius: 6px;
+  }
+}
+
+@layer utilities {
+  .bg-fondo {
+    background-color: var(--color-fondo);
+  }
+
+  .text-texto {
+    color: var(--color-texto);
+  }
+
+  .bg-primario {
+    background-color: var(--color-primario);
+  }
+
+  .bg-secundario {
+    background-color: var(--color-secundario);
+  }
+
+  .text-acento {
+    color: var(--color-acento);
+  }
+}
+
+select option {
+  background-color: var(--color-secundario);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  -webkit-text-fill-color: var(--color-texto) !important;
+  caret-color: var(--color-texto);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input::-ms-reveal,
+::-webkit-calendar-picker-indicator,
+input::-webkit-credentials-auto-fill-button {
+  filter: invert(50%); /* fuerza a blanco */
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+  scrollbar-gutter: stable !important;
+}
+
+.maplibregl-popup-content {
+  background-color: var(--color-secundario) !important;
+  color: var(--color-texto) !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  position: relative;
+}
+
+.maplibregl-popup-close-button {
+  color: var(--color-texto);
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  font-size: 1.25rem;
+}
+
+.maplibregl-popup-close-button:hover {
+  color: red;
+}
+
+.maplibregl-canvas-container {
+  overflow: hidden !important;
+}
+
